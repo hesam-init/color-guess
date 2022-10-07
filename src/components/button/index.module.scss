@@ -1,0 +1,60 @@
+.guessButton {
+  flex: 1;
+  border: none;
+  background-color: #113f67;
+  padding: 12px;
+  color: white;
+  font-weight: bolder;
+  border: 2px solid black;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+  font-size: medium;
+
+  &:hover {
+    transform: translateY(-6px);
+    cursor: pointer;
+  }
+}
+
+.playAgainButton {
+  background-color: white;
+  border: none;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+
+  svg {
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+    width: 85px;
+    height: 85px;
+  }
+
+  &::before {
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+
+    box-sizing: content-box;
+    position: absolute;
+    right: -12px;
+    bottom: -12px;
+    transform: translateZ(-1px);
+    border: 4px solid black;
+    background-color: #155263;
+    width: 100%;
+    height: 100%;
+    content: "";
+  }
+
+  &:hover {
+    cursor: pointer;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+    svg {
+      width: 85px;
+      height: 85px;
+      transform: rotate(180deg);
+    }
+
+    &::before {
+      right: -16px;
+      bottom: -16px;
+    }
+  }
+}

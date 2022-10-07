@@ -1,0 +1,13 @@
+.colorBox {
+  width: 100%;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrongBox {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
